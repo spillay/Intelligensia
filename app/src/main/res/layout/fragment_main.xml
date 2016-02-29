@@ -9,9 +9,11 @@
     tools:context="com.dsleng.android.intelligensia.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="New Button"
+        android:id="@+id/check_button"
+        android:layout_marginTop="25dp" />
 
 </RelativeLayout>
