@@ -1,8 +1,7 @@
 package com.dsleng.android.intelligensia;
 
-import android.content.Context;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,10 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(v.getContext(),"SP HELLO",Toast.LENGTH_SHORT).show();
+        Toast.makeText(v.getContext(),getMessage(),Toast.LENGTH_SHORT).show();
+    }
+    public native String getMessage();
+    static {
+        System.loadLibrary("spHandler");
     }
 }
